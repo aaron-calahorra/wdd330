@@ -52,8 +52,8 @@ main {
 a {
     padding: 10px;
     border-radius: 10px;
-
     transition: background-color 0.2s ease;
+    margin-left: -10px;
 }
 
 a:hover {
