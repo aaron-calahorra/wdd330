@@ -1,0 +1,9 @@
+{
+    "links": [
+       {
+           "label": "Week 1 — Notes",
+           "url": "week1.html",
+           "notes": "This week I was able to create the template for my portfolio and notes for this class. It was sort of a review from last semester using, when I improve my JS skills.\n\nFirst, I wrote the content of my portfolio in an HTML file. This helped me stay organized and style faster. I was able to review the example provided by our teacher, and this gave me a better idea on how to develop this assignment.\n\nIn order to maintain simplicity and a clean code, I decided to use an external JSON file to store everything each week.\n\nNo questions came up this week."
+       } 
+    ]
+}
