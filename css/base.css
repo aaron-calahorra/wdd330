@@ -71,3 +71,7 @@ pre {
 div {
     max-width: 600px;
 }
+
+li {
+    line-height: 40px;
+}

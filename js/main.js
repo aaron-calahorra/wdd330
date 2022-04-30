@@ -1,23 +1,28 @@
-const requestURL = 'links.json';
-let links = [];
+const url = 'https://opensheet.elk.sh/1eVVm09EHUn7ZwIonTHf02wB9p8l0xqAjJ27XApfR7Jg/Notes'; //Use opensheet
 
-fetch(requestURL)
-    .then(function (response) {
-    return response.json();
-    })
-    .then(function (jsonObject) {
-        console.table(jsonObject);  // temporary checking for valid response and data parsing
-        temples = jsonObject['links'];
-        temples.forEach(displayLinks);
+fetch(url)
+    .then(response => response.json())
+    .then(data => {
+        data.forEach((row) => {
+            console.log(row);
+            displayLinks(row);
+        });
     });
 
 function displayLinks(link) {
     let li = document.createElement('li');
     let a = document.createElement('a');
     
-    a.textContent = link.label + " ➞";
-    a.setAttribute('href', link.url);
+    a.textContent = link.Label + " ➞";
+    a.setAttribute('href', 'notes.html');
+    a.setAttribute('onclick', 'idSetter(' + link.ID + ')');
 
     li.appendChild(a);
     document.querySelector('ol').appendChild(li);
-}
+};
+
+function idSetter(id) {
+    localStorage.setItem('weekID', id);
+};
+
+
