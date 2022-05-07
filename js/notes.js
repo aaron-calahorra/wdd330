@@ -11,12 +11,16 @@ fetch(url)
 function displayNotes(link) {
     let h3 = document.createElement('h3');
     let pre = document.createElement('pre');
+    let a = document.createElement('a');
     
     h3.textContent = link.Label;
     pre.textContent = link.Notes;
+    a.textContent = 'Go to team assignment (Glitch) →';
+    a.setAttribute('href', link.url);
 
 
     document.querySelector('div').appendChild(h3);
     document.querySelector('div').appendChild(pre);
+    document.querySelector('div').appendChild(a);
 
 };
