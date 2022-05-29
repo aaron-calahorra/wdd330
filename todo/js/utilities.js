@@ -42,5 +42,5 @@ export function renderOneToDo(task) {
 }
 
 export function updateCount(ls){
-    document.getElementById('task-number').innerHTML = `${(ls != null) ? ls.length : 0}  tasks left`;
+    document.getElementById('task-number').innerHTML = `${(ls != null) ? ls.length : 0}  tasks in list`;
 }
