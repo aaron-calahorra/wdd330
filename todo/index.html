@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+    <link rel="stylesheet" href="/todo/css/base.css">
+</head>
+<body>
+<header>
+  <h1>ToDo<br>List ✔︎</h1>
+</header>
+<ul id="task-list"></ul>
+<section class="info">
+  <span id="task-number">0 tasks left</span>
+  <button class="tab selected-tab" id="all">All tasks</button>
+  <button class="tab" id="active">Not completed</button>
+  <button class="tab" id="complete">Completed</button>
+</section>
+<div id="task-input-area">
+  <input type="text" id="task-input" placeholder="New task"/>
+  <button id="add-task">Add</button>
+</div>
+</body>
+<script src="js/main.js" type="module"></script>
+</html>

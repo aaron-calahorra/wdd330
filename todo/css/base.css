@@ -1,0 +1,131 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(38,38,32);
+  background: linear-gradient(90deg, rgba(38,38,32,1) 0%, rgba(1,1,1,1) 100%);
+  color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+  width: 85vw;
+  max-width: 500px;
+}
+
+h1 {
+  margin: 30px 0;
+  font-size: 7rem;
+  line-height: 75%;
+  letter-spacing: -10px;
+  color: #f1d805;
+}
+
+#task-input-area {
+  margin-bottom: 10vh;
+  position: fixed;
+  bottom: 0%;
+  width: 85vw;
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  box-shadow: 0 5px 15px black;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+li {
+  display: flex;
+  align-items: center;
+  width: 85vw;
+  max-width: 500px;
+  border-bottom: 0;
+  padding: 0 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+li p {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+li input {
+  width: 20px;
+  height: 20px;
+  border-radius: 0.5px;
+  border: 0;
+  cursor: pointer;
+}
+
+.delete {
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #f1d805;
+  font-size: 90%;
+}
+
+section {
+  display: flex;
+  border-radius: 0 0 5px 5px;
+  width: 85vw;
+  max-width: 500px;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+
+#task-input-area input {
+  width: 100%;
+  padding: 20px 10px;
+  max-width: 400px;
+  background-color: black;
+  border: 1px solid #f1d805;
+  color: white;
+  border-radius: 5px 0 0 5px;
+
+}
+
+#task-input-area button {
+  background-color: #f1d805;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  width: 100px;
+  border: 1px solid #f1d805;
+}
+
+.completed p{
+  text-decoration: line-through;
+  color: #f1d805;
+}
+
+.tab {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  font-size: 90%;
+  border: 0;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.selected-tab {
+  background-color: #f1d805;
+  color: black;
+}
+
+#task-number {
+  font-size: 90%;
+  color: rgba(255, 255, 255, 0.5)
+}
+
