@@ -21,6 +21,8 @@ function displayNotes(link) {
 
     document.querySelector('div').appendChild(h3);
     document.querySelector('div').appendChild(pre);
-    document.querySelector('div').appendChild(a);
+    if (!link.url || !link.url.length) {
+        document.querySelector('div').appendChild(a);
+    }
 
 };
