@@ -21,7 +21,7 @@ function displayNotes(link) {
 
     document.querySelector('div').appendChild(h3);
     document.querySelector('div').appendChild(pre);
-    console.log(link.url);
+    console.log("hey");
     if (link.url != "") {
         document.querySelector('div').appendChild(a);
     }
