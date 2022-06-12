@@ -22,7 +22,7 @@ function displayNotes(link) {
     document.querySelector('div').appendChild(h3);
     document.querySelector('div').appendChild(pre);
     console.log(link.url);
-    if (!link.url || !link.url.length) {
+    if (link.url != "") {
         document.querySelector('div').appendChild(a);
     }
 
