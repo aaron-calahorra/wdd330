@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Institute Registration</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Inter:wght@400;800&display=swap" rel="stylesheet">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
+    <link rel="stylesheet" href="css/base.css">
+</head>
+
+<body>
+    <header>
+        <div>Institute</div>
+        <a href="index.html"><button>Register</button></a>
+    </header>
+    
+    <section>
+        <h1>Welcome to Institute, register today</h1>
+        <a href="student-finder.html">Already registered? Check your registration.</a>
+    </section>
+
+    <section>
+        <form action="" method="post">
+            <fieldset>
+                <label for="name">Full name</label>
+                <input type="text" name="name" required>
+                <label for="preferred-name">Preferred name</label>
+                <input type="text" name="preferred-name">
+                <label for="birthdate">Birthdate</label>
+                <input type="date" name="birthdate">
+                <span>Gender</span>
+                <input type="radio" name="gender" value="men">
+                <label for="men">Men</label>
+                <input type="radio" name="gender" value="women">
+                <label for="women">Women</label>
+                <span>Religion</span>
+                <input type="radio" name="religion" value="member">
+                <label for="member">Member of The Church of Jesus Christ of Latter-day Saints</label>
+                <input type="radio" name="religion" value="non-member">
+                <label for="non-member">Other</label>
+                <label for="stake">Stake</label>
+                <select name="stake">
+                    <option value="default" selected disabled>Select your stake</option>
+                    <option value="Chuviscar">Chuviscar</option>
+                    <option value="Chih-Mex">Chih-Mex</option>
+                    <option value="Tecnologico">Tecnológico</option>
+                </select>
+                <span>Address</span>
+                <div class="form-group">
+                    <input type="street" 
+                        class="form-control" 
+                        id="autocomplete" 
+                        placeholder="Street and number">
+                    
+                    <input type="neighborhood" 
+                        class="form-control" 
+                        id="inputNeighborhood" 
+                        placeholder="Neighborhood">
+                    
+                    <input type="city" 
+                        class="form-control" 
+                        id="inputCity" 
+                        placeholder="City">
+                    
+                    <input type="state" 
+                        class="form-control" 
+                        id="inputState" 
+                        placeholder="State">
+                    
+                    <input type="zip" 
+                        class="form-control" 
+                        id="inputZip" 
+                        placeholder="Zip">
+                </div>
+                <label for="phone">Phone</label>
+                <input type="phone" name="phone" required>
+                <label for="email">Email</label>
+                <input type="email" name="email" required>
+                <label for="school">School attending (if applicable)</label>
+                <input type="text" name="school">
+                <a href="#" class="collapsible">Read agreement</a>
+                <section class="content"> 
+                <h3>Participating in Institute</h3>
+                    <p>Participating in institute is a privilege, and we welcome you. You agree to
+                        comply with institute policies and also agree that Seminaries and
+                        Institutes of Religion, a department of Corporation of the President of
+                        The Church of Jesus Christ of Latter-day Saints, and its affiliated legal
+                        entities (collectively “we”) are not responsible for any harm that may
+                        result from your failure to comply with these policies.</p>
+
+                    <h3>Student Information Privacy Policy</h3>
+                    <p>You agree that we may collect and process your personal information
+                        from this form and from your membership record (if you are a member
+                        of The Church of Jesus Christ of Latter-day Saints) for purposes related
+                        to your enrollment and participation in institute and to respond to
+                        questions or issues that may arise while you are in institute. You
+                        understand that your personal information may be transferred to
+                        Church headquarters in the United States, and you consent to this
+                        transfer, if applicable. Your personal information may be retained
+                        indefinitely as part of a permanent Church historical record. We will
+                        never sell your information. We use technical and organizational
+                        measures to protect the personal information we receive against loss,
+                        misuse, and unauthorized alteration and to protect its confidentiality.</p>
+                    <p>Research studies and surveys: If you are asked to participate in a
+                        research study or survey, you understand that participation is entirely
+                        voluntary and that you may withdraw at any point. Any personal
+                        information you provide as part of a research study (for example, email
+                        address or mobile phone number) will be used only for the purpose of
+                        contacting you about participating in future studies or surveys. You may
+                        opt out of receiving such contacts.</p>
+
+                    <h3>Release to Use Image</h3>
+                    <p>We may have occasion to film or record you in connection with institute.
+                        Likely uses include, but are not limited to, distance learning activities,
+                        teacher training, and photos or videos in yearbooks, firesides, bulletin
+                        boards, websites, or social media. To this end, you assign and irrevocably
+                        grant to us the right and permission to use and—without limit to time,
+                        number, language, geography, and/or medium (including now unknown
+                        and future media)—reproduce, distribute, display, perform, create
+                        derivative works from, or sublicense any images or recordings made of
+                        you in connection with institute. You authorize us to use or record your
+                        name, voice, image, likeness, and performance; to interview and record
+                        your interview; and to copy, reproduce, adapt, edit, and summarize any
+                        recording for use at our discretion. You authorize the reproduction, sale,
+                        copyright, exhibition, broadcast, electronic storage, and/or distribution of
+                        images or recordings without limitation, at our discretion. You hereby
+                        release us from any and all liability from such use and publication, and
+                        you waive any right to compensation for any of the foregoing.</p>
+
+                    <h3>Internet and Online Use Policy</h3>
+                    <p>We provide a number of electronic resources to enable your participation in institute. You can decide whether to use these resources, but if
+                        you do, you accept the following conditions:</p>
+                    <p>When you access the internet using our facilities, equipment, or wireless
+                        technology, we may collect information from your web browser. This
+                        information may include your IP address, browser type, operating
+                        system, and language preference; any referring web page you were
+                        visiting before you came to our site; the date and time of each visit; and
+                        information you search for on our sites. We also use cookies and clear
+                        GIFs to collect information online. You can change your web browser
+                        setting to stop accepting cookies or to prompt you before accepting a
+                        cookie from the sites you visit. If you configure your web browser setting
+                        to not accept cookies or clear GIFs, however, you may not be able to use
+                        some sections or functions of our sites.</p>
+                    <p>The websites, software, content, servers, and other technologies and
+                        materials we use to deliver institute programs (“Institute Tools”) are
+                        owned or licensed and operated by us. We may monitor all communications (email, text messages, social media, and so forth) that use or take
+                        place within Institute Tools for inappropriate or illegal content and may
+                        forward them to ecclesiastical leaders or law enforcement officials as
+                        needed to protect students and Church interests. You consent to this
+                        monitoring and forwarding. Although we may monitor some communications, we cannot monitor all communications. Electronic communications are not secure. We do not guarantee that you will not be exposed
+                        to unwanted messages, material, viruses, or other malware. Messages
+                        containing inappropriate content may be deleted without notice and
+                        may not be sent to intended recipients. You agree that you will not send
+                        or resend any message that is obscene, defamatory, illegal, or hateful or
+                        that infringes or violates the rights of others. Institute Tools may be used
+                        only for communicating with other students, teachers, and ecclesiastical
+                        leaders regarding gospel-related topics and events. You may not
+                        download, redistribute, or post (for example, on YouTube or Facebook)
+                        any text, image, sound, or video file from Institute Tools.</p>
+                    <p>We are not liable for any damages (including lost data) caused by your
+                        use of, or your inability to use, Institute Tools or any materials or
+                        messages provided therein or by other users or linked sites. Institute
+                        Tools are provided “as is.” We disclaim all express or implied warranties,
+                        including warranties of title, merchantability, and fitness for a particular
+                        purpose. We do not warrant that the functionality of Institute Tools will
+                        be uninterrupted or error free, that defects will be corrected, or that any
+                        website or server that makes Institute Tools available is free of viruses or
+                        other harmful components.</p>
+
+                    <h3>Miscellaneous</h3>
+                    <p>You are responsible for complying with all laws and regulations in your
+                        area, but this Agreement is governed by the laws of the State of Utah,
+                        USA, without giving effect to principles of conflicts of law. Any legal action
+                        brought to enforce this Agreement or relating to institute shall be
+                        brought in the state or federal courts located in Salt Lake County, Utah,
+                        USA, and you hereby consent and submit to the personal jurisdiction of
+                        such courts. If any provision of this Agreement is unlawful, void, or
+                        unenforceable in whole or in part, the remaining provisions shall not be
+                        affected unless we determine that the invalid or unenforceable provision
+                        is an essential term to the Agreement, in which case we may, at our sole
+                        discretion, amend the Agreement.</p>
+                    <p>If you have questions or concerns regarding this Agreement, please
+                        email your concerns to siregistration@ldschurch.org, or contact your
+                        local institute administrator.</p>
+                    </section>
+                    <label for="accept">If you accept the terms, check the box below to accept the agreement</label>
+                    <input type="checkbox" name="accept">
+                    <div class="row">
+                        <div class="col-md-12">
+                             <canvas id="sig-canvas" width="620" height="160">
+                                 Get a better browser, bro.
+                             </canvas>
+                         </div>
+                    </div>
+                    <a href="#" class="btn btn-default" id="sig-clearBtn">Clear signature</a>
+                    <button type="submit">Submit registration</button>
+            </fieldset>
+        </form>
+    </section>
+</body>
+<script src="js/app.js" type="module"></script>
+</html>
