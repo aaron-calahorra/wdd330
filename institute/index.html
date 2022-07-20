@@ -8,26 +8,28 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Inter:wght@400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap" rel="stylesheet">
     <!-- CSS Files -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"/>
     <link rel="stylesheet" href="css/base.css">
+   
+    <script type="text/javascript" src="http://cdn.jsdelivr.net/jquery/1.11.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.3.4/signature_pad.min.js" integrity="sha512-Mtr2f9aMp/TVEdDWcRlcREy9NfgsvXvApdxrm3/gK8lAMWnXrFsYaoW01B5eJhrUpBT7hmIjLeaQe0hnL7Oh1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body>
     <header>
         <div>Institute</div>
-        <a href="index.html"><button>Register</button></a>
+        <a href="index.html">Register</a>
     </header>
     
-    <section>
-        <h1>Welcome to Institute, register today</h1>
+    <section class="hero">
+        <h1>Welcome to Institute!<br>Register today.</h1>
         <a href="student-finder.html">Already registered? Check your registration.</a>
     </section>
 
     <section>
-        <form action="" method="post">
+        <form method="POST" action="https://script.google.com/macros/s/AKfycbwRGP6MR4SzSPdjZdFF9nK2f92WsM2rad4Xr4cVz4kM70M6UGQt8k212xSAHsARpDsg/exec">
             <fieldset>
                 <label for="name">Full name</label>
                 <input type="text" name="name" required>
@@ -35,16 +37,20 @@
                 <input type="text" name="preferred-name">
                 <label for="birthdate">Birthdate</label>
                 <input type="date" name="birthdate">
-                <span>Gender</span>
-                <input type="radio" name="gender" value="men">
-                <label for="men">Men</label>
-                <input type="radio" name="gender" value="women">
-                <label for="women">Women</label>
-                <span>Religion</span>
-                <input type="radio" name="religion" value="member">
-                <label for="member">Member of The Church of Jesus Christ of Latter-day Saints</label>
-                <input type="radio" name="religion" value="non-member">
-                <label for="non-member">Other</label>
+                <div class="radio">
+                    <label for="gender">Gender</label>
+                    <input type="radio" name="gender" value="man">
+                    <span>Man</span>
+                    <input type="radio" name="gender" value="woman">
+                    <span>Woman</span>
+                </div>
+                <div class="radio">
+                    <label for="religion">Religion</label>
+                    <input type="radio" name="religion" value="member">
+                    <span>Member of The Church of Jesus Christ of Latter-day Saints</span>
+                    <input type="radio" name="religion" value="non-member">
+                    <span>Other</span>
+                </div>
                 <label for="stake">Stake</label>
                 <select name="stake">
                     <option value="default" selected disabled>Select your stake</option>
@@ -52,31 +58,27 @@
                     <option value="Chih-Mex">Chih-Mex</option>
                     <option value="Tecnologico">Tecnológico</option>
                 </select>
-                <span>Address</span>
+        
                 <div class="form-group">
+                    <label for="address">Address</label>
                     <input type="street" 
-                        class="form-control" 
-                        id="autocomplete" 
+                        name="street-name" 
                         placeholder="Street and number">
                     
                     <input type="neighborhood" 
-                        class="form-control" 
-                        id="inputNeighborhood" 
+                        name="neighborhood"
                         placeholder="Neighborhood">
                     
                     <input type="city" 
-                        class="form-control" 
-                        id="inputCity" 
+                        name="city"
                         placeholder="City">
                     
                     <input type="state" 
-                        class="form-control" 
-                        id="inputState" 
+                        name="state"
                         placeholder="State">
                     
                     <input type="zip" 
-                        class="form-control" 
-                        id="inputZip" 
+                        name="zip" 
                         placeholder="Zip">
                 </div>
                 <label for="phone">Phone</label>
@@ -85,7 +87,26 @@
                 <input type="email" name="email" required>
                 <label for="school">School attending (if applicable)</label>
                 <input type="text" name="school">
-                <a href="#" class="collapsible">Read agreement</a>
+
+                
+                <hr width="100%"/>
+                <h2>Select your classes</h2>
+                <select name="class1" class="selectClasses1">
+                    <option value="-" disabled selected>Select your first class</option>
+                </select>
+
+                <select name="class2" class="selectClasses2">
+                    <option value="-" disabled selected>Select your second class</option>
+                </select>
+
+                <select name="class3" class="selectClasses3">
+                    <option value="-" disabled selected>Select your third class</option>
+                </select>
+
+                <hr width="100%"/>
+
+
+                <a class="collapsible">Read agreement</a>
                 <section class="content"> 
                 <h3>Participating in Institute</h3>
                     <p>Participating in institute is a privilege, and we welcome you. You agree to
@@ -190,20 +211,23 @@
                         email your concerns to siregistration@ldschurch.org, or contact your
                         local institute administrator.</p>
                     </section>
-                    <label for="accept">If you accept the terms, check the box below to accept the agreement</label>
-                    <input type="checkbox" name="accept">
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="accept">
+                        <label for="accept">I accept the terms and coditions decribed in the agreement.</label>
+                    </div>
                     
                     <div class="flex-row">
                         <div class="wrapper">
-                            <canvas id="signature-pad" width="400" height="200"></canvas>
-                        </div>
-                        <div class="clear-btn">
-                            <button id="clear"><span> Clear </span></button>
+                            <canvas id="signature-pad" width="500" height="200"></canvas>
                         </div>
                     </div>
 
-                    <a href="#" class="btn btn-default" id="sig-clearBtn">Clear signature</a>
-                    <button type="submit">Submit registration</button>
+                    <a id="clear">Clear signature</a>
+                    
+
+                    
+                    <button type="submit" id="submit-form">Submit registration</button>
             </fieldset>
         </form>
     </section>
