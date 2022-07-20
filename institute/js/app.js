@@ -34,10 +34,21 @@ document.getElementById("clear").addEventListener('click', function(){
 signaturePad.clear();
 })
 
+$("#btnSaveSignature").click(function(e){
+  html2canvas([document.getElementById('signaturePad')], {
+      onrendered: function (canvas) {
+          var canvas_img_data = canvas.toDataURL('image/png');
+          var img_data = canvas_img_data.replace(/^data:image\/(png|jpg);base64,/, "");
+          console.log(img_data);
+          document.getElementById("canvasImage").src="data:image/gif;base64,"+img_data;
+      }
+  });
+});
 
 
 
-//select fetch
+
+//Select class fetch
 
 const select1 = document.querySelector('.selectClasses1');
 const select2 = document.querySelector('.selectClasses2');
@@ -51,24 +62,19 @@ fetch(url, {
     method: 'GET',
   })
   .then(res => res.json())
-  .then(lista_de_categorias => {
-    //console.log("Las categorías son:", lista_de_categorias);
-    // alert('HAY ' + lista_de_categorias.length) Puedes poner este alert para ver si la llamada POST te devuelve algo
-
-    for (let categoria of lista_de_categorias) {
-      let nuevaOpcion = document.createElement("option");
-      nuevaOpcion.value = categoria.Class + " - " + categoria.Teacher;
-      nuevaOpcion.text = categoria.Class + " - " + categoria.Teacher + " - " + categoria.Time;
-      select1.add(nuevaOpcion.cloneNode(true));
-      select2.add(nuevaOpcion.cloneNode(true));
-      select3.add(nuevaOpcion.cloneNode(true));
+  .then(classesList => {
+    for (let classItem of classesList) {
+      let newClass = document.createElement("option");
+      newClass.value = classItem.Class + " - " + classItem.Teacher;
+      newClass.text = classItem.Class + " - " + classItem.Teacher + " - " + classItem.Time;
+      select1.add(newClass.cloneNode(true));
+      select2.add(newClass.cloneNode(true));
+      select3.add(newClass.cloneNode(true));
 
     }
   })
   .catch(function(error) {
-    console.error("¡Error!", error);
-  })
+    console.error("Error!", error);
+  }
+)
 
-
-
-  //save to google sheets

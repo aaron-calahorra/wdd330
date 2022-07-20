@@ -42,6 +42,7 @@ header a {
   margin-bottom: 5px;
   background: -webkit-linear-gradient(180deg,#495ED1, #09BC8A);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   padding-bottom: 10px;
   width: fit-content;
